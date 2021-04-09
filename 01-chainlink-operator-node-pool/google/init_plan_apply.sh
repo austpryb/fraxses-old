@@ -1,17 +1,20 @@
 #!/bin/bash
-
-# Useful commands for Terraform if you have successfully exported environment variables
 # Or Manually set your environment variables
+# Note that for the hackthon I have opted to pass my kovan ETH url in as the default for all my nodes. 
+# To add support for MAINNET or other chains just create variables in the <cloud>/modules/k8s/variables.tf and <cloud>/variables.tf files and pass them into their correct Terraform config
+# For any questions on how to do this reach me on Discord @austpryb
 export $PROJECT_ID=""
 export $SA_EMAIL=""
 export $CLUSTER_NAME=""
 export $GCP_REGION=""
 export $GCP_ZONE=""
-export SSH_EMAIL=$SSH_EMAIL
-export USER_EMAIL=$USER_EMAIL
-export SSH_KEY=$SSH_KEY
+export $SSH_EMAIL=""
+export $USER_EMAIL=""
+export $SSH_KEY=""
+export $ETH_URL_KOVAN=""
 
- terraform init 
+terraform init
+
 
 #terraform destroy -var project_id=$PROJECT_ID \
 #    -var sa_email=$SA_EMAIL \

@@ -6,3 +6,4 @@ terraform.tfstate*
 tf.plan
 chainlink.tfvars
 .env
+.terraform.lock.hcl
